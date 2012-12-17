@@ -26,7 +26,7 @@ Example test cases:
 
 > def count_words(string)
 >
->     # your code here
+>   # your code here
 >
 > end
 
@@ -58,31 +58,29 @@ We'll get you started:
 > 
 > def rps_game_winner(game)
 >
->      raise WrongNumberOfPlayersError unless game.length == 2
+>   raise WrongNumberOfPlayersError unless game.length == 2
 > 
->     # your code here
+>   # your code here
 > 
 > end
 
 **Part B**: We will define a rock-paper-scissors tournament to be an array of games in which each player always plays the same move. A rock-paper-scissors tournament is encoded as a bracketed array of games:
 > [
+>   [
 > 
->     [
+>       [ ["Armando", "P"], ["Dave", "S"] ],
 > 
->         [ ["Armando", "P"], ["Dave", "S"] ],
+>       [ ["Richard", "R"],  ["Michael", "S"] ],
 > 
->         [ ["Richard", "R"],  ["Michael", "S"] ],
+>   ],
 > 
->     ],
+>   [
 > 
->     [
+>       [ ["Allen", "S"], ["Omer", "P"] ],
 > 
->         [ ["Allen", "S"], ["Omer", "P"] ],
+>       [ ["David E.", "R"], ["Richard X.", "P"] ]
 > 
->         [ ["David E.", "R"], ["Richard X.", "P"] ]
-> 
->     ]
-> 
+>   ]
 > ]
 
 
@@ -103,3 +101,31 @@ Finally,
 Tournaments can be nested arbitrarily deep, i.e., it may require multiple rounds to get to a single winner. You can assume that the initial tournament is well-formed (that is, there are 2^n players, and each one participates in exactly one match per round).
 
 Write a method __rps_tournament_winner__ that takes a tournament encoded as a bracketed array and returns the winner (for the above example, it should return ["Richard", "R"]).
+
+
+## HW 1-3: ANAGRAMS
+An anagram is a word obtained by rearranging the letters of another word. For example, "rats", "tars", and "star" are anagrams of one another, as are "dictionary" and "indicatory". We will call any array of single-word anagrams an anagram group. For instance, ["rats", "tars", "star"] is an anagram group, as is ["dictionary"].
+
+Write a method __combine_anagrams(words)__ that, given an array of strings words, groups the input words into anagram groups. Case doesn't matter in classifying strings as anagrams (but case should be preserved in the output), and the order of the anagrams in the groups doesn't matter. The output should be an array of anagram groups (i.e. an array of arrays).
+
+Code skeleton:
+> def combine_anagrams(words)
+>
+>    # your code here
+>
+> end
+
+Example test case:
+> # input: ['cars', 'for', 'potatoes', 'racs', 'four', 'scar', 'creams', 'scream'] 
+>
+> # output: [ ["cars", "racs", "scar"],
+>
+> #           ["four"],
+>
+> #           ["for"],
+>
+> #           ["potatoes"],
+>
+> #           ["creams", "scream"] ]
+
+Hint: You can quickly tell if two words are anagrams by sorting their letters, keeping in mind that upper vs. lowercase doesn't matter.
