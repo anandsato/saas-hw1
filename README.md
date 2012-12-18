@@ -8,13 +8,6 @@ In this problem, you are asked to implement two functions that perform basic str
 
 Your solution shouldn't use loops or iteration of any kind. Instead, you will find regular-expression syntax very useful; it's reviewed briefly in the book, and the website [rubular.com](http://www.rubular.com/) lets you try out Ruby regular expressions "live". Some methods that you might find useful (which you'll have to look up in Ruby documentation, [ruby-doc.org](http://ruby-doc.org/)) include: __String#downcase__, __String#gsub__, __String#reverse__.
 
-Example test cases:
-> palindrome?("A man, a plan, a canal -- Panama")  # => true
->
-> palindrome?("Madam, I'm Adam!")                  # => true
->
-> palindrome?("Abracadabra")                       # => false (nil is also ok)
-
 **Part B — Word Count**: Define a function __count_words(string)__ that, given an input string, return a hash whose keys are words in the string and whose values are the number of times each word appears. Your code should look like:
 
 Your solution shouldn't use for-loops, but iterators like each are permitted. As before, nonwords and case should be ignored. A word is defined as a string of characters between word boundaries. (Hint: the sequence "\b" in a Ruby regexp means "word boundary".)
